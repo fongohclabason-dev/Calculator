@@ -1,0 +1,80 @@
+.history {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--dark-border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.history h3 {
+  font-size: 13px;
+  color: var(--muted-text);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.history-list {
+  max-height: 150px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 12px;
+}
+
+.history-item:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.history-expr {
+  color: var(--muted-text);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-result {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.history-empty {
+  font-size: 12px;
+  color: var(--muted-text);
+  text-align: center;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid var(--dark-border);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}

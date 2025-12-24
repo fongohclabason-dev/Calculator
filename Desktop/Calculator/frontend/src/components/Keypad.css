@@ -1,0 +1,160 @@
+.keypad {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.function-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.control-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.btn {
+  padding: 14px;
+  border: 1px solid var(--dark-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+}
+
+.btn-number {
+  background: rgba(100, 116, 139, 0.3);
+  color: var(--light-text);
+}
+
+.btn-number:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
+
+.btn-number:active {
+  background: rgba(100, 116, 139, 0.7);
+}
+
+.btn-operator {
+  background: rgba(59, 130, 246, 0.3);
+  color: var(--primary-color);
+}
+
+.btn-operator:hover {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+.btn-operator:active {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+.btn-function {
+  background: rgba(16, 185, 129, 0.3);
+  color: var(--success-color);
+  font-size: 12px;
+}
+
+.btn-function:hover {
+  background: rgba(16, 185, 129, 0.5);
+}
+
+.btn-function:active {
+  background: rgba(16, 185, 129, 0.7);
+}
+
+.btn-equals {
+  background: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  grid-column: span 1;
+}
+
+.btn-equals:hover {
+  background: var(--primary-dark);
+}
+
+.btn-equals:active {
+  background: #1e3a8a;
+}
+
+.btn-clear {
+  background: rgba(239, 68, 68, 0.3);
+  color: var(--danger-color);
+  font-weight: 600;
+}
+
+.btn-clear:hover {
+  background: rgba(239, 68, 68, 0.5);
+}
+
+.btn-delete {
+  background: rgba(245, 158, 11, 0.3);
+  color: var(--warning-color);
+}
+
+.btn-delete:hover {
+  background: rgba(245, 158, 11, 0.5);
+}
+
+.btn-special {
+  background: rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
+}
+
+.btn-special:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+.btn-toggle {
+  background: rgba(236, 72, 153, 0.3);
+  color: #f472b6;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-toggle:hover {
+  background: rgba(236, 72, 153, 0.5);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+  .function-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .control-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .number-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .btn {
+    padding: 12px;
+    min-height: 45px;
+    font-size: 13px;
+  }
+
+  .zero {
+    grid-column: span 2;
+  }
+}
